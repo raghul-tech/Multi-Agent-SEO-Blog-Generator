@@ -41,9 +41,9 @@ def get_bing_news(topic):
         results = search.get_dict()
         organic_results = results.get("organic_results", [])
 
-        # Ensure Bing results match the Google News format (title, link)
+        
         bing_results = [
-            (article["title"], article.get("link", "No Link Available"))  # Extract title and link
+            (article["title"], article.get("link", "No Link Available"))  
             for article in organic_results[:5]
         ]
     except Exception as e:
